@@ -12,57 +12,71 @@ E="cache-references,cache-misses,L1-dcache-loads,L1-dcache-load-misses,l2_cache_
 
 Datasets utilizados:
 http://snap.stanford.edu/data/soc-Slashdot0811.txt.gz
-https://snap.stanford.edu/data/ego-Twitter.html
 
 
 BST - Recursiva:
-perf stat -e "$E" ./bst_bench tree_data.bin 2000000
+  perf stat -e "$E" ./bst_bench tree_data.bin 2000000
 
- Performance counter stats for './bst_bench tree_data.bin 2000000':
+  [BST] Arquivo: tree_data.bin | buscas: 2000000
+  [BST] Tempo inserção (ms): 156731
+  [BST] Tempo busca    (ms): 3190.21
+  [BST] found_count: 2000000
 
-     4.396.584.106      cache-references                                                     (49,99%)
-     1.777.604.676      cache-misses                     #   40,431 % of all cache refs      (49,99%)
-    37.066.138.846      L1-dcache-loads                                                      (49,99%)
-     1.639.764.447      L1-dcache-load-misses            #    4,42% of all L1-dcache accesses  (50,00%)
-     2.619.710.013      l2_cache_accesses_from_dc_misses                                     (50,01%)
-     1.645.120.208      l2_cache_misses_from_dc_misses                                       (50,01%)
-   327.083.671.237      cycles                                                               (50,01%)
-    42.474.433.514      instructions                     #    0,13  insn per cycle           (50,01%)
-    11.800.387.069      branches                                                             (50,00%)
-       839.710.683      branch-misses                    #    7,12% of all branches          (49,99%)
+  Performance counter stats for './bst_bench tree_data.bin 2000000':
 
-      70,014519093 seconds time elapsed
+     9.595.715.515      cache-references                                                     (50,00%)
+     3.905.245.310      cache-misses                     #   40,698 % of all cache refs      (50,00%)
+    78.502.592.464      L1-dcache-loads                                                      (50,00%)
+     3.407.541.530      L1-dcache-load-misses            #    4,34% of all L1-dcache accesses  (50,00%)
+     5.735.308.915      l2_cache_accesses_from_dc_misses                                     (50,00%)
+     3.634.317.014      l2_cache_misses_from_dc_misses                                       (50,00%)
+   779.730.303.945      cycles                                                               (50,00%)
+    87.830.631.450      instructions                     #    0,11  insn per cycle           (50,00%)
+    24.539.393.196      branches                                                             (50,00%)
+     1.794.808.988      branch-misses                    #    7,31% of all branches          (50,00%)
 
-      68,964503000 seconds user
-       1,048007000 seconds sys
+     172,501257582 seconds time elapsed
 
+     170,652995000 seconds user
+       1,835924000 seconds sys
 
+  perf stat -e "$E" ./bst_bench tree_data.bin 8000000
 
 BST - if-then-else:
-perf stat -e "$E" ./bst_iter_bench tree_data.bin 2000000
+  perf stat -e "$E" ./bst_iter_bench tree_data.bin 2000000
 
- Performance counter stats for './bst_iter_bench tree_data.bin 2000000':
+  [BST-Iter] Arquivo: tree_data.bin | buscas: 2000000
+  [BST-Iter] Tempo inserção (ms): 153430
+  [BST-Iter] Tempo busca    (ms): 3230.65
+  [BST-Iter] found_count: 2000000
 
-     4.400.511.487      cache-references                                                     (50,00%)
-     1.798.646.318      cache-misses                     #   40,874 % of all cache refs      (50,00%)
-    13.678.602.767      L1-dcache-loads                                                      (50,00%)
-     1.632.152.720      L1-dcache-load-misses            #   11,93% of all L1-dcache accesses  (50,01%)
-     2.630.248.345      l2_cache_accesses_from_dc_misses                                     (50,01%)
-     1.703.584.992      l2_cache_misses_from_dc_misses                                       (50,00%)
-   334.335.590.673      cycles                                                               (50,00%)
-    33.269.152.581      instructions                     #    0,10  insn per cycle           (50,00%)
-     9.005.720.506      branches                                                             (49,99%)
-       812.317.292      branch-misses                    #    9,02% of all branches          (49,99%)
+  Performance counter stats for './bst_iter_bench tree_data.bin 2000000':
 
-      72,804333075 seconds time elapsed
+     9.792.108.900      cache-references                                                     (50,00%)
+     4.057.194.151      cache-misses                     #   41,433 % of all cache refs      (50,00%)
+    28.152.176.803      L1-dcache-loads                                                      (50,00%)
+     3.458.698.832      L1-dcache-load-misses            #   12,29% of all L1-dcache accesses  (50,00%)
+     5.827.592.293      l2_cache_accesses_from_dc_misses                                     (50,01%)
+     3.784.876.694      l2_cache_misses_from_dc_misses                                       (50,00%)
+   796.467.208.727      cycles                                                               (50,00%)
+    68.339.505.480      instructions                     #    0,09  insn per cycle           (50,00%)
+    18.611.649.817      branches                                                             (50,00%)
+     1.718.780.155      branch-misses                    #    9,23% of all branches          (49,99%)
 
-      71,878843000 seconds user
-       0,923985000 seconds sys
+     173,717205818 seconds time elapsed
+
+     171,842074000 seconds user
+       1,863892000 seconds sys
 
 
 
 BST - AVL:
-perf stat -e "$E" ./avl_bench tree_data.bin 2000000
+  perf stat -e "$E" ./avl_bench tree_data.bin 2000000
+
+  [AVL] Arquivo: tree_data.bin | buscas: 2000000
+  [AVL] Tempo inserção (ms): 161110
+  [AVL] Tempo busca    (ms): 1821.11
+  [AVL] found_count: 2000000
 
  Performance counter stats for './avl_bench tree_data.bin 2000000':
 
@@ -83,11 +97,7 @@ perf stat -e "$E" ./avl_bench tree_data.bin 2000000
        1,379965000 seconds sys
 
 Grafo - Matriz Adjacência:
-perf stat -e "$E" ./graph_matrix_bench soc-Slashdot0811.txt 0
-
-[Graph-List] Arquivo: soc-Slashdot0811.txt | start: 0
-[Graph-List] Tempo construção (ms): 8.85515
-[Graph-List] Tempo BFS         (ms): 2.3592
+  perf stat -e "$E" ./graph_matrix_bench soc-Slashdot0811.txt 0
 
  Performance counter stats for './graph_list_bench soc-Slashdot0811.txt 0':
 
@@ -107,10 +117,9 @@ perf stat -e "$E" ./graph_matrix_bench soc-Slashdot0811.txt 0
        0,217747000 seconds user
        0,016129000 seconds sys
 
-perf stat -e "$E" ./graph_matrix_bench twitter_combined.txt 0
 
 Grafo Lista de Adjacência:
-perf stat -e "$E" ./graph_list_bench soc-Slashdot0811.txt 0
+  
 
  Performance counter stats for './graph_list_bench soc-Slashdot0811.txt 0':
 

@@ -6,7 +6,7 @@
 #include <cstdint>
 
 int main() {
-    const uint64_t num_elements = 50000000;
+    const uint64_t num_elements = 100000000;
     const char* filename = "tree_data.bin";
 
     std::vector<uint64_t> data(num_elements);
