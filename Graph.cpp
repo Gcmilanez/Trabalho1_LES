@@ -7,6 +7,7 @@
 // --- Matriz de Adjacência ---
 AdjacencyMatrixGraph::AdjacencyMatrixGraph(uint32_t num_vertices) : V(num_vertices) {
     // Cuidado: Isso aloca V*V booleans. Pode consumir muita memória!
+    
     try {
         matrix.resize( (uint64_t)V * V, false);
     } catch (const std::bad_alloc& e) {

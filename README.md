@@ -8,24 +8,14 @@ Gabriel Welter
 ## Estruturas Implementadas
 
 * **Árvore:**
-    * Árvore de Busca Binária (`BST`).
+    * Árvore de Busca Binária Recursiva
+    * Árvore de Busca Binária if-else
+    * Árvore de Busca Binária AVL
 * **Grafo:**
     * Representação com Matriz de Adjacência.
     * Representação com Lista de Adjacência.
     * Representação com Hash Map de Adjacência.
 
-## Estrutura do Projeto
-
-```
-.
-├── Tree.h                # Definição da estrutura da Árvore
-├── Tree.cpp              # Implementação da Árvore
-├── Graph.h               # Definição das estruturas de Grafo
-├── Graph.cpp             # Implementação dos Grafos
-├── main.cpp              # Lógica principal do benchmark
-├── generate_data.cpp     # Utilitário para gerar o dataset da árvore
-└── README.md             # Este arquivo
-```
 
 ## Pré-requisitos
 
