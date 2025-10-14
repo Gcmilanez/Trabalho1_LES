@@ -441,6 +441,28 @@ Grafo - Matriz Adjacência:
 
      434,778840000 seconds user
        0,075996000 seconds sys
+
+  [Graph-Matrix] Arquivo: soc-Slashdot0811.txt | start: 0 | BFS_runs: 128
+  [Graph-Matrix] Tempo construção (ms): 81.782
+  [Graph-Matrix] Tempo 128x BFS (ms): 881110
+
+  Performance counter stats for './graph_matrix_bench soc-Slashdot0811.txt 0':
+
+     3.684.856.640      cache-references                                                     (50,00%)
+       229.822.581      cache-misses                     #    6,237 % of all cache refs      (50,00%)
+ 3.836.020.372.813      L1-dcache-loads                                                      (50,00%)
+     1.728.069.557      L1-dcache-load-misses            #    0,05% of all L1-dcache accesses  (50,00%)
+     1.726.684.754      l2_cache_accesses_from_dc_misses                                     (50,00%)
+        76.239.962      l2_cache_misses_from_dc_misses                                       (50,00%)
+ 3.842.346.804.397      cycles                                                               (50,00%)
+21.445.303.171.032      instructions                     #    5,58  insn per cycle           (50,00%)
+ 3.063.841.587.748      branches                                                             (50,00%)
+       178.952.936      branch-misses                    #    0,01% of all branches          (50,00%)
+
+     881,417113743 seconds time elapsed
+
+     881,295679000 seconds user
+       0,083997000 seconds sys
   
   perf stat -e "$E" ./graph_matrix_bench email-EuAll.txt 0
 
@@ -509,7 +531,29 @@ Grafo - Matriz Adjacência:
 
     1001,088810000 seconds user
        0,787991000 seconds sys
+  
 
+  [Graph-Matrix] Arquivo: email-EuAll.txt | start: 0 | BFS_runs: 128
+  [Graph-Matrix] Tempo construção (ms): 829.784
+  [Graph-Matrix] Tempo 128x BFS (ms): 1.99198e+06
+
+  Performance counter stats for './graph_matrix_bench email-EuAll.txt 0':
+
+     9.028.726.340      cache-references                                                     (50,00%)
+       680.684.757      cache-misses                     #    7,539 % of all cache refs      (50,00%)
+ 8.843.899.928.713      L1-dcache-loads                                                      (50,00%)
+     4.238.807.602      L1-dcache-load-misses            #    0,05% of all L1-dcache accesses  (50,00%)
+     4.240.192.619      l2_cache_accesses_from_dc_misses                                     (50,00%)
+       261.830.982      l2_cache_misses_from_dc_misses                                       (50,00%)
+ 8.871.269.049.419      cycles                                                               (50,00%)
+49.552.316.176.978      instructions                     #    5,59  insn per cycle           (50,00%)
+ 7.079.368.741.783      branches                                                             (50,00%)
+       154.818.519      branch-misses                    #    0,00% of all branches          (50,00%)
+
+    1992,933096257 seconds time elapsed
+
+    1982,632627000 seconds user
+       0,803975000 seconds sys
   
 
 
@@ -586,6 +630,28 @@ Grafo Lista de Adjacência:
 
        0,330171000 seconds user
        0,008052000 seconds sys
+    
+  [Graph-List] Arquivo: soc-Slashdot0811.txt | start: 0 | BFS_runs: 128
+  [Graph-List] Tempo construção (ms): 9.54255
+  [Graph-List] Tempo 128x BFS (ms): 221.346
+
+  Performance counter stats for './graph_list_bench soc-Slashdot0811.txt 0':
+
+        71.410.427      cache-references                                                     (48,46%)
+        20.753.581      cache-misses                     #   29,062 % of all cache refs      (49,34%)
+     1.775.405.011      L1-dcache-loads                                                      (50,22%)
+        33.829.608      L1-dcache-load-misses            #    1,91% of all L1-dcache accesses  (51,09%)
+        33.270.223      l2_cache_accesses_from_dc_misses                                     (51,69%)
+         9.928.228      l2_cache_misses_from_dc_misses                                       (51,54%)
+     2.030.412.344      cycles                                                               (50,66%)
+     5.046.123.905      instructions                     #    2,49  insn per cycle           (49,78%)
+       942.551.658      branches                                                             (48,91%)
+        15.628.848      branch-misses                    #    1,66% of all branches          (48,31%)
+
+       0,456677533 seconds time elapsed
+
+       0,444778000 seconds user
+       0,012021000 seconds sys
 
   perf stat -e "$E" ./graph_list_bench email-EuAll.txt 0     
   
@@ -654,6 +720,28 @@ Grafo Lista de Adjacência:
 
        0,161072000 seconds user
        0,004026000 seconds sys
+
+  [Graph-List] Arquivo: email-EuAll.txt | start: 0 | BFS_runs: 128
+  [Graph-List] Tempo construção (ms): 9.45928
+  [Graph-List] Tempo 128x BFS (ms): 91.6505
+
+ Performance counter stats for './graph_list_bench email-EuAll.txt 0':
+
+        41.621.665      cache-references                                                     (48,84%)
+        16.669.413      cache-misses                     #   40,050 % of all cache refs      (50,75%)
+       828.058.774      L1-dcache-loads                                                      (52,25%)
+        23.631.573      L1-dcache-load-misses            #    2,85% of all L1-dcache accesses  (52,25%)
+        23.568.293      l2_cache_accesses_from_dc_misses                                     (52,25%)
+        12.191.080      l2_cache_misses_from_dc_misses                                       (51,16%)
+       917.954.383      cycles                                                               (49,25%)
+     2.119.982.806      instructions                     #    2,31  insn per cycle           (47,75%)
+       399.490.518      branches                                                             (47,75%)
+         9.160.562      branch-misses                    #    2,29% of all branches          (47,75%)
+
+       0,211002636 seconds time elapsed
+
+       0,198950000 seconds user
+       0,012180000 seconds sys
   
 
 
@@ -731,6 +819,29 @@ Grafo - Hash Map:
 
        0,369600000 seconds user
        0,008034000 seconds sys
+
+  [Graph-Hash] Arquivo: soc-Slashdot0811.txt | start: 0 | BFS_runs: 128
+  [Graph-Hash] Tempo construção (ms): 14.068
+  [Graph-Hash] Tempo 128x BFS (ms): 273.538
+
+  Performance counter stats for './graph_hash_bench soc-Slashdot0811.txt 0':
+
+        98.144.637      cache-references                                                     (49,08%)
+        25.232.636      cache-misses                     #   25,710 % of all cache refs      (49,08%)
+     1.936.018.213      L1-dcache-loads                                                      (49,08%)
+        46.764.099      L1-dcache-load-misses            #    2,42% of all L1-dcache accesses  (49,73%)
+        46.936.376      l2_cache_accesses_from_dc_misses                                     (50,52%)
+        15.265.519      l2_cache_misses_from_dc_misses                                       (50,92%)
+     2.274.057.981      cycles                                                               (50,92%)
+     5.214.493.677      instructions                     #    2,29  insn per cycle           (50,92%)
+       979.415.035      branches                                                             (50,27%)
+        15.921.118      branch-misses                    #    1,63% of all branches          (49,48%)
+
+       0,512119706 seconds time elapsed
+
+       0,504132000 seconds user
+       0,008002000 seconds sys
+
   
   perf stat -e "$E" ./graph_hash_bench email-EuAll.txt 0
 
@@ -799,7 +910,31 @@ Grafo - Hash Map:
 
        0,199982000 seconds user
        0,007999000 seconds sys
+  
+  [Graph-Hash] Arquivo: email-EuAll.txt | start: 0 | BFS_runs: 128
+  [Graph-Hash] Tempo construção (ms): 19.2154
+  [Graph-Hash] Tempo 128x BFS (ms): 147.078
 
+  Performance counter stats for './graph_hash_bench email-EuAll.txt 0':
+
+        65.775.383      cache-references                                                     (49,99%)
+        24.084.881      cache-misses                     #   36,617 % of all cache refs      (49,99%)
+       966.318.309      L1-dcache-loads                                                      (49,99%)
+        34.075.909      L1-dcache-load-misses            #    3,53% of all L1-dcache accesses  (49,99%)
+        36.100.536      l2_cache_accesses_from_dc_misses                                     (49,98%)
+        21.872.129      l2_cache_misses_from_dc_misses                                       (50,01%)
+     1.247.771.145      cycles                                                               (50,01%)
+     2.240.040.811      instructions                     #    1,80  insn per cycle           (50,01%)
+       435.471.278      branches                                                             (50,01%)
+         9.878.525      branch-misses                    #    2,27% of all branches          (50,02%)
+
+       0,282474373 seconds time elapsed
+
+       0,262689000 seconds user
+       0,019900000 seconds sys
+
+perf stat -e "$E" ./graph_matrix_bench soc-Slashdot0811.txt 0
+perf stat -e "$E" ./graph_matrix_bench email-EuAll.txt 0
 perf stat -e "$E" ./graph_list_bench soc-Slashdot0811.txt 0
 perf stat -e "$E" ./graph_list_bench email-EuAll.txt 0
 perf stat -e "$E" ./graph_hash_bench soc-Slashdot0811.txt 0

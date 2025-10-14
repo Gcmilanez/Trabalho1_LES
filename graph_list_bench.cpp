@@ -4,14 +4,14 @@
 #include "Graph.h"
 #include "bench_utils.h"
 
-// This benchmark builds the graph and runs exactly 16 BFS traversals.
+// This benchmark builds the graph and runs exactly 128 BFS traversals.
 // Usage: ./graph_list_bench <graph_file> <start_node>
 int main(int argc, char** argv) {
     const std::string filename   = (argc > 1) ? argv[1] : "soc-Slashdot0811.txt";
     const uint32_t    start_node = (argc > 2) ? static_cast<uint32_t>(std::stoul(argv[2])) : 0;
 
     std::cout << "[Graph-List] Arquivo: " << filename << " | start: " << start_node
-              << " | BFS_runs: 16\n";
+              << " | BFS_runs: 128\n";
 
     // Load edges (SNAP-like "u v" per line). Returns <V, edges>.
     auto [V, edges] = load_snap_graph(filename);
@@ -27,12 +27,12 @@ int main(int argc, char** argv) {
     for (auto [u, v] : edges) g.add_edge(u, v);
     double build_ms = t.stop_ms();
 
-    // 16 BFS runs (same start node for determinism)
+    // 128 BFS runs (same start node for determinism)
     t.start();
-    for (int i = 0; i < 16; ++i) g.bfs(start_node);
+    for (int i = 0; i < 128; ++i) g.bfs(start_node);
     double bfs_ms = t.stop_ms();
 
     std::cout << "[Graph-List] Tempo construção (ms): " << build_ms << "\n";
-    std::cout << "[Graph-List] Tempo 16x BFS (ms): " << bfs_ms << std::endl;
+    std::cout << "[Graph-List] Tempo 128x BFS (ms): " << bfs_ms << std::endl;
     return 0;
 }
