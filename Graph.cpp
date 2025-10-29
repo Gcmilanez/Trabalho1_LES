@@ -4,42 +4,43 @@
 #include <queue>
 #include <algorithm>
 
-// --- Matriz de Adjacência ---
-AdjacencyMatrixGraph::AdjacencyMatrixGraph(uint32_t num_vertices) : V(num_vertices) {
-    // Cuidado: Isso aloca V*V booleans. Pode consumir muita memória!
-    
-    try {
-        matrix.resize( (uint64_t)V * V, false);
-    } catch (const std::bad_alloc& e) {
-        std::cerr << "Falha ao alocar matriz de adjacência: " << e.what() << std::endl;
-        std::cerr << "Memória necessária: " << ((uint64_t)V * V) / (1024*1024) << " MB" << std::endl;
-        throw;
-    }
+AdjacencyMatrixGraph::AdjacencyMatrixGraph(uint32_t num_vertices)
+    : V(num_vertices)
+{
+    words_per_row = (V + 63u) / 64u;
+    matrix.assign(static_cast<size_t>(V) * words_per_row, 0ull);
 }
 
 void AdjacencyMatrixGraph::add_edge(uint32_t u, uint32_t v) {
-    matrix[(uint64_t)u * V + v] = true;
+    set_edge_bit(u, v);
+    // Se o grafo for não-direcionado, descomente:
+    // set_edge_bit(v, u);
 }
 
 bool AdjacencyMatrixGraph::has_edge(uint32_t u, uint32_t v) {
-    return matrix[(uint64_t)u * V + v];
+    return test_edge_bit(u, v);
 }
 
 void AdjacencyMatrixGraph::bfs(uint32_t start_node) {
     std::vector<bool> visited(V, false);
     std::queue<uint32_t> q;
-
     visited[start_node] = true;
     q.push(start_node);
 
     while (!q.empty()) {
-        uint32_t u = q.front();
-        q.pop();
-        // std::cout << u << " "; // Descomente para ver o percurso
-        for (uint32_t v = 0; v < V; ++v) {
-            if (has_edge(u, v) && !visited[v]) {
-                visited[v] = true;
-                q.push(v);
+        uint32_t u = q.front(); q.pop();
+
+        const uint64_t* row = &matrix[static_cast<size_t>(u) * words_per_row];
+        for (uint32_t w = 0; w < words_per_row; ++w) {
+            uint64_t word = row[w];
+            while (word) {
+                unsigned tz = (unsigned)__builtin_ctzll(word);
+                uint32_t v = (w << 6) + tz;
+                if (v < V && !visited[v]) {
+                    visited[v] = true;
+                    q.push(v);
+                }
+                word &= (word - 1);
             }
         }
     }

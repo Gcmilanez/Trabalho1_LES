@@ -3,6 +3,20 @@
 #include <cstdint>
 #include "Tree.h"
 #include "bench_utils.h"
+#include <algorithm>
+#include <unordered_set>  
+#include <cstring>    
+
+// Inserção em ordem balanceada para melhorar localidade de cache em BSTs.
+// Pré-condição: o vetor está ordenado (e, idealmente, com duplicatas removidas).
+template <typename T, typename Inserter>
+static void insert_balanced(const std::vector<T>& v, Inserter ins, size_t lo, size_t hi) {
+    if (lo >= hi) return;
+    size_t mid = lo + (hi - lo) / 2;
+    ins(v[mid]);
+    insert_balanced(v, ins, lo, mid);
+    insert_balanced(v, ins, mid + 1, hi);
+}
 
 // Benchmark steps:
 // 1) Carrega tree_data.bin (uint64_t)
@@ -15,6 +29,11 @@ int main(int argc, char** argv) {
     std::cout << "[BST] Arquivo: " << data_file << " | buscas: " << num_searches << std::endl;
 
     auto data = load_tree_data(data_file);
+    // Construir ordem de inserção balanceada
+    std::vector<uint64_t> sorted = data;
+    std::sort(sorted.begin(), sorted.end());
+    sorted.erase(std::unique(sorted.begin(), sorted.end()), sorted.end());
+
     if (data.empty()) {
         std::cerr << "[BST] Dataset vazio ou não encontrado.\n";
         return 1;
@@ -29,7 +48,8 @@ int main(int argc, char** argv) {
 
     // Buscas
     auto queries = sample_queries<uint64_t>(data, num_searches);
-     uint64_t found_count = 0;
+    std::sort(queries.begin(), queries.end());
+    uint64_t found_count = 0;
     t.start();
     for (auto q : queries) {
         if (tree.search(q)) found_count++;

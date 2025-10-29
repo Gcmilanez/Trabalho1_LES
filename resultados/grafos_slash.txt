@@ -1,0 +1,274 @@
+[Graph-Matrix] Arquivo: soc-Slashdot0811.txt | start: 0 | BFS_runs: 128 
+[Graph-Matrix] Tempo construção (ms): 78.0829
+[Graph-Matrix] Tempo 128 BFS (ms): 12587.1
+
+ Performance counter stats for './graph_matrix_bench soc-Slashdot0811.txt 0 128':
+
+     3.511.698.258      cache-references                                                     (50,00%)
+       137.456.238      cache-misses                     #    3,914 % of all cache refs      (50,02%)
+    34.255.407.250      L1-dcache-loads                                                      (50,02%)
+     1.621.324.943      L1-dcache-load-misses            #    4,73% of all L1-dcache accesses  (50,02%)
+     1.618.360.180      l2_cache_accesses_from_dc_misses                                     (50,03%)
+        30.493.726      l2_cache_misses_from_dc_misses                                       (50,00%)
+    58.197.697.996      cycles                                                               (49,98%)
+   125.457.604.479      instructions                     #    2,16  insn per cycle           (49,98%)
+    24.988.572.457      branches                                                             (49,98%)
+       130.569.191      branch-misses                    #    0,52% of all branches          (49,97%)
+
+      12,886203735 seconds time elapsed
+
+      12,813870000 seconds user
+       0,072010000 seconds sys
+
+
+[Graph-Matrix] Arquivo: soc-Slashdot0811.txt | start: 0 | BFS_runs: 256 
+[Graph-Matrix] Tempo construção (ms): 79.4176
+[Graph-Matrix] Tempo 256 BFS (ms): 25533.5
+
+ Performance counter stats for './graph_matrix_bench soc-Slashdot0811.txt 0 256':
+
+     6.935.889.618      cache-references                                                     (49,99%)
+       266.455.673      cache-misses                     #    3,842 % of all cache refs      (49,99%)
+    67.299.755.052      L1-dcache-loads                                                      (49,99%)
+     3.213.798.757      L1-dcache-load-misses            #    4,78% of all L1-dcache accesses  (50,00%)
+     3.209.736.214      l2_cache_accesses_from_dc_misses                                     (50,00%)
+        53.689.098      l2_cache_misses_from_dc_misses                                       (50,01%)
+   114.818.141.455      cycles                                                               (50,01%)
+   247.513.272.225      instructions                     #    2,16  insn per cycle           (50,01%)
+    49.305.987.089      branches                                                             (50,00%)
+       259.211.914      branch-misses                    #    0,53% of all branches          (50,00%)
+
+      25,835943681 seconds time elapsed
+
+      25,759440000 seconds user
+       0,075998000 seconds sys
+
+
+[Graph-Matrix] Arquivo: soc-Slashdot0811.txt | start: 0 | BFS_runs: 512 
+[Graph-Matrix] Tempo construção (ms): 79.957
+[Graph-Matrix] Tempo 512 BFS (ms): 51047.9
+
+ Performance counter stats for './graph_matrix_bench soc-Slashdot0811.txt 0 512':
+
+    13.786.708.060      cache-references                                                     (49,99%)
+       524.240.333      cache-misses                     #    3,803 % of all cache refs      (50,00%)
+   133.252.992.437      L1-dcache-loads                                                      (50,00%)
+     6.384.022.949      L1-dcache-load-misses            #    4,79% of all L1-dcache accesses  (50,00%)
+     6.382.067.581      l2_cache_accesses_from_dc_misses                                     (50,00%)
+        98.725.422      l2_cache_misses_from_dc_misses                                       (50,01%)
+   227.726.582.754      cycles                                                               (50,00%)
+   492.080.335.736      instructions                     #    2,16  insn per cycle           (50,00%)
+    98.033.410.603      branches                                                             (50,00%)
+       517.058.822      branch-misses                    #    0,53% of all branches          (50,00%)
+
+      51,357526877 seconds time elapsed
+
+      51,280356000 seconds user
+       0,076000000 seconds sys
+
+
+[Graph-Matrix] Arquivo: soc-Slashdot0811.txt | start: 0 | BFS_runs: 1024 
+[Graph-Matrix] Tempo construção (ms): 77.7529
+[Graph-Matrix] Tempo 1024 BFS (ms): 100556
+
+ Performance counter stats for './graph_matrix_bench soc-Slashdot0811.txt 0 1024':
+
+    27.464.494.228      cache-references                                                     (50,00%)
+     1.045.732.234      cache-misses                     #    3,808 % of all cache refs      (50,00%)
+   265.222.532.788      L1-dcache-loads                                                      (50,00%)
+    12.713.475.960      L1-dcache-load-misses            #    4,79% of all L1-dcache accesses  (50,01%)
+    12.717.205.415      l2_cache_accesses_from_dc_misses                                     (50,01%)
+       203.277.643      l2_cache_misses_from_dc_misses                                       (50,00%)
+   455.481.215.007      cycles                                                               (50,00%)
+   981.325.237.509      instructions                     #    2,15  insn per cycle           (50,00%)
+   195.509.632.978      branches                                                             (49,99%)
+     1.031.879.134      branch-misses                    #    0,53% of all branches          (49,99%)
+
+     100,856250315 seconds time elapsed
+
+     100,782059000 seconds user
+       0,072011000 seconds sys
+
+
+[Graph-List] Arquivo: soc-Slashdot0811.txt | start: 0 | BFS_runs: 128 
+[Graph-List] Tempo construção (ms): 9.59175
+[Graph-List] Tempo 128 BFS (ms): 226.178
+
+ Performance counter stats for './graph_list_bench soc-Slashdot0811.txt 0 128':
+
+        71.190.162      cache-references                                                     (48,52%)
+        20.493.966      cache-misses                     #   28,788 % of all cache refs      (48,52%)
+     1.788.006.267      L1-dcache-loads                                                      (49,11%)
+        32.783.955      L1-dcache-load-misses            #    1,83% of all L1-dcache accesses  (49,97%)
+        33.146.869      l2_cache_accesses_from_dc_misses                                     (50,83%)
+         9.911.411      l2_cache_misses_from_dc_misses                                       (51,48%)
+     2.051.381.616      cycles                                                               (51,48%)
+     5.031.639.363      instructions                     #    2,45  insn per cycle           (50,89%)
+       921.707.021      branches                                                             (50,03%)
+        15.505.136      branch-misses                    #    1,68% of all branches          (49,17%)
+
+       0,467657983 seconds time elapsed
+
+       0,455757000 seconds user
+       0,011993000 seconds sys
+
+
+[Graph-List] Arquivo: soc-Slashdot0811.txt | start: 0 | BFS_runs: 256 
+[Graph-List] Tempo construção (ms): 10.0066
+[Graph-List] Tempo 256 BFS (ms): 459.439
+
+ Performance counter stats for './graph_list_bench soc-Slashdot0811.txt 0 256':
+
+       132.616.255      cache-references                                                     (49,08%)
+        39.652.342      cache-misses                     #   29,900 % of all cache refs      (49,65%)
+     2.368.080.029      L1-dcache-loads                                                      (50,22%)
+        62.814.462      L1-dcache-load-misses            #    2,65% of all L1-dcache accesses  (50,79%)
+        63.521.393      l2_cache_accesses_from_dc_misses                                     (51,37%)
+        19.624.493      l2_cache_misses_from_dc_misses                                       (50,92%)
+     3.066.354.451      cycles                                                               (50,35%)
+     6.865.905.518      instructions                     #    2,24  insn per cycle           (49,78%)
+     1.203.059.964      branches                                                             (49,21%)
+        30.180.661      branch-misses                    #    2,51% of all branches          (48,63%)
+
+       0,700907656 seconds time elapsed
+
+       0,685107000 seconds user
+       0,015932000 seconds sys
+
+
+[Graph-List] Arquivo: soc-Slashdot0811.txt | start: 0 | BFS_runs: 512 
+[Graph-List] Tempo construção (ms): 9.49677
+[Graph-List] Tempo 512 BFS (ms): 926.897
+
+ Performance counter stats for './graph_list_bench soc-Slashdot0811.txt 0 512':
+
+       260.046.982      cache-references                                                     (50,05%)
+        79.743.117      cache-misses                     #   30,665 % of all cache refs      (50,29%)
+     3.511.575.781      L1-dcache-loads                                                      (50,29%)
+       122.786.256      L1-dcache-load-misses            #    3,50% of all L1-dcache accesses  (50,29%)
+       122.661.473      l2_cache_accesses_from_dc_misses                                     (50,29%)
+        38.719.589      l2_cache_misses_from_dc_misses                                       (49,95%)
+     5.117.194.241      cycles                                                               (49,71%)
+    10.568.120.040      instructions                     #    2,07  insn per cycle           (49,71%)
+     1.753.370.402      branches                                                             (49,71%)
+        59.630.314      branch-misses                    #    3,40% of all branches          (49,71%)
+
+       1,168301638 seconds time elapsed
+
+       1,160332000 seconds user
+       0,008002000 seconds sys
+
+
+[Graph-List] Arquivo: soc-Slashdot0811.txt | start: 0 | BFS_runs: 1024 
+[Graph-List] Tempo construção (ms): 9.5679
+[Graph-List] Tempo 1024 BFS (ms): 1829.84
+
+ Performance counter stats for './graph_list_bench soc-Slashdot0811.txt 0 1024':
+
+       510.399.076      cache-references                                                     (49,57%)
+       158.428.535      cache-misses                     #   31,040 % of all cache refs      (49,70%)
+     5.822.200.531      L1-dcache-loads                                                      (49,87%)
+       242.907.769      L1-dcache-load-misses            #    4,17% of all L1-dcache accesses  (50,08%)
+       242.315.831      l2_cache_accesses_from_dc_misses                                     (50,28%)
+        75.948.634      l2_cache_misses_from_dc_misses                                       (50,43%)
+     9.213.544.669      cycles                                                               (50,30%)
+    17.891.521.166      instructions                     #    1,94  insn per cycle           (50,13%)
+     2.870.304.397      branches                                                             (49,92%)
+       118.523.171      branch-misses                    #    4,13% of all branches          (49,72%)
+
+       2,063709645 seconds time elapsed
+
+       2,043777000 seconds user
+       0,019997000 seconds sys
+
+
+[Graph-Hash] Arquivo: soc-Slashdot0811.txt | start: 0 | BFS_runs: 128 
+[Graph-Hash] Tempo construção (ms): 14.2879
+[Graph-Hash] Tempo 128 BFS (ms): 272.446
+
+ Performance counter stats for './graph_hash_bench soc-Slashdot0811.txt 0 128':
+
+       100.284.933      cache-references                                                     (49,37%)
+        25.164.313      cache-misses                     #   25,093 % of all cache refs      (49,37%)
+     1.925.120.498      L1-dcache-loads                                                      (49,38%)
+        46.757.735      L1-dcache-load-misses            #    2,43% of all L1-dcache accesses  (49,42%)
+        46.945.202      l2_cache_accesses_from_dc_misses                                     (50,19%)
+        15.219.539      l2_cache_misses_from_dc_misses                                       (50,63%)
+     2.240.555.663      cycles                                                               (50,63%)
+     5.240.843.317      instructions                     #    2,34  insn per cycle           (50,62%)
+       981.184.383      branches                                                             (50,58%)
+        15.918.131      branch-misses                    #    1,62% of all branches          (49,81%)
+
+       0,515141785 seconds time elapsed
+
+       0,498949000 seconds user
+       0,015966000 seconds sys
+
+
+[Graph-Hash] Arquivo: soc-Slashdot0811.txt | start: 0 | BFS_runs: 256 
+[Graph-Hash] Tempo construção (ms): 14.111
+[Graph-Hash] Tempo 256 BFS (ms): 539.771
+
+ Performance counter stats for './graph_hash_bench soc-Slashdot0811.txt 0 256':
+
+       190.547.462      cache-references                                                     (49,60%)
+        50.726.860      cache-misses                     #   26,622 % of all cache refs      (50,16%)
+     2.605.765.404      L1-dcache-loads                                                      (50,55%)
+        90.989.875      L1-dcache-load-misses            #    3,49% of all L1-dcache accesses  (50,55%)
+        90.342.872      l2_cache_accesses_from_dc_misses                                     (50,55%)
+        29.113.749      l2_cache_misses_from_dc_misses                                       (50,40%)
+     3.444.645.390      cycles                                                               (49,84%)
+     7.260.138.153      instructions                     #    2,11  insn per cycle           (49,45%)
+     1.314.348.936      branches                                                             (49,45%)
+        30.708.177      branch-misses                    #    2,34% of all branches          (49,45%)
+
+       0,770142519 seconds time elapsed
+
+       0,766210000 seconds user
+       0,003990000 seconds sys
+
+
+[Graph-Hash] Arquivo: soc-Slashdot0811.txt | start: 0 | BFS_runs: 512 
+[Graph-Hash] Tempo construção (ms): 14.2988
+[Graph-Hash] Tempo 512 BFS (ms): 1082.21
+
+ Performance counter stats for './graph_hash_bench soc-Slashdot0811.txt 0 512':
+
+       370.812.059      cache-references                                                     (49,96%)
+        98.465.874      cache-misses                     #   26,554 % of all cache refs      (49,96%)
+     4.018.767.382      L1-dcache-loads                                                      (49,95%)
+       178.107.799      L1-dcache-load-misses            #    4,43% of all L1-dcache accesses  (49,95%)
+       179.514.865      l2_cache_accesses_from_dc_misses                                     (50,03%)
+        58.921.106      l2_cache_misses_from_dc_misses                                       (50,04%)
+     5.917.386.045      cycles                                                               (50,04%)
+    11.197.956.747      instructions                     #    1,89  insn per cycle           (50,05%)
+     1.953.987.668      branches                                                             (50,05%)
+        59.617.491      branch-misses                    #    3,05% of all branches          (49,97%)
+
+       1,320389855 seconds time elapsed
+
+       1,312541000 seconds user
+       0,007978000 seconds sys
+
+
+[Graph-Hash] Arquivo: soc-Slashdot0811.txt | start: 0 | BFS_runs: 1024 
+[Graph-Hash] Tempo construção (ms): 14.1687
+[Graph-Hash] Tempo 1024 BFS (ms): 2279.1
+
+ Performance counter stats for './graph_hash_bench soc-Slashdot0811.txt 0 1024':
+
+       726.789.533      cache-references                                                     (49,81%)
+       195.847.651      cache-misses                     #   26,947 % of all cache refs      (49,81%)
+     6.784.059.930      L1-dcache-loads                                                      (49,81%)
+       352.521.777      L1-dcache-load-misses            #    5,20% of all L1-dcache accesses  (49,94%)
+       354.150.086      l2_cache_accesses_from_dc_misses                                     (50,10%)
+       118.059.123      l2_cache_misses_from_dc_misses                                       (50,19%)
+    11.254.884.821      cycles                                                               (50,19%)
+    19.188.818.787      instructions                     #    1,70  insn per cycle           (50,19%)
+     3.267.958.068      branches                                                             (50,06%)
+       117.065.742      branch-misses                    #    3,58% of all branches          (49,90%)
+
+       2,512103326 seconds time elapsed
+
+       2,504239000 seconds user
+       0,008000000 seconds sys

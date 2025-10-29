@@ -1,0 +1,274 @@
+[Graph-Matrix] Arquivo: email-EuAll.txt | start: 0 | BFS_runs: 128 
+[Graph-Matrix] Tempo construção (ms): 1756.22
+[Graph-Matrix] Tempo 128 BFS (ms): 29333.6
+
+ Performance counter stats for './graph_matrix_bench email-EuAll.txt 0 128':
+
+     8.375.311.863      cache-references                                                     (49,98%)
+       338.290.226      cache-misses                     #    4,039 % of all cache refs      (50,00%)
+    66.281.520.031      L1-dcache-loads                                                      (50,01%)
+     4.022.630.999      L1-dcache-load-misses            #    6,07% of all L1-dcache accesses  (50,03%)
+     4.032.309.203      l2_cache_accesses_from_dc_misses                                     (50,03%)
+       142.602.382      l2_cache_misses_from_dc_misses                                       (50,02%)
+   137.003.885.217      cycles                                                               (50,00%)
+   281.773.950.916      instructions                     #    2,06  insn per cycle           (49,99%)
+    56.537.412.116      branches                                                             (49,97%)
+       134.248.604      branch-misses                    #    0,24% of all branches          (49,97%)
+
+      31,384902566 seconds time elapsed
+
+      29,653330000 seconds user
+       1,711384000 seconds sys
+
+
+[Graph-Matrix] Arquivo: email-EuAll.txt | start: 0 | BFS_runs: 256 
+[Graph-Matrix] Tempo construção (ms): 1432.83
+[Graph-Matrix] Tempo 256 BFS (ms): 56552.7
+
+ Performance counter stats for './graph_matrix_bench email-EuAll.txt 0 256':
+
+    15.988.439.902      cache-references                                                     (50,00%)
+       529.660.654      cache-misses                     #    3,313 % of all cache refs      (50,00%)
+   127.153.401.411      L1-dcache-loads                                                      (50,00%)
+     7.583.501.989      L1-dcache-load-misses            #    5,96% of all L1-dcache accesses  (50,00%)
+     7.600.877.063      l2_cache_accesses_from_dc_misses                                     (50,00%)
+       162.134.613      l2_cache_misses_from_dc_misses                                       (50,00%)
+   258.613.720.447      cycles                                                               (50,00%)
+   558.076.029.339      instructions                     #    2,16  insn per cycle           (50,00%)
+   111.682.309.371      branches                                                             (50,00%)
+       145.884.417      branch-misses                    #    0,13% of all branches          (50,00%)
+
+      58,241115438 seconds time elapsed
+
+      56,870679000 seconds user
+       1,367968000 seconds sys
+
+
+[Graph-Matrix] Arquivo: email-EuAll.txt | start: 0 | BFS_runs: 512 
+[Graph-Matrix] Tempo construção (ms): 1347.64
+[Graph-Matrix] Tempo 512 BFS (ms): 113795
+
+ Performance counter stats for './graph_matrix_bench email-EuAll.txt 0 512':
+
+    31.184.904.792      cache-references                                                     (49,99%)
+       966.236.980      cache-misses                     #    3,098 % of all cache refs      (50,00%)
+   256.695.378.759      L1-dcache-loads                                                      (50,00%)
+    14.694.233.450      L1-dcache-load-misses            #    5,72% of all L1-dcache accesses  (50,00%)
+    14.718.705.046      l2_cache_accesses_from_dc_misses                                     (50,01%)
+       237.264.177      l2_cache_misses_from_dc_misses                                       (50,01%)
+   510.763.047.717      cycles                                                               (50,00%)
+ 1.112.148.615.581      instructions                     #    2,18  insn per cycle           (50,00%)
+   222.477.342.916      branches                                                             (50,00%)
+       201.394.367      branch-misses                    #    0,09% of all branches          (49,99%)
+
+     115,375655034 seconds time elapsed
+
+     114,071186000 seconds user
+       1,299945000 seconds sys
+
+
+[Graph-Matrix] Arquivo: email-EuAll.txt | start: 0 | BFS_runs: 1024 
+[Graph-Matrix] Tempo construção (ms): 1232.24
+[Graph-Matrix] Tempo 1024 BFS (ms): 225396
+
+ Performance counter stats for './graph_matrix_bench email-EuAll.txt 0 1024':
+
+    61.480.710.599      cache-references                                                     (50,00%)
+     1.827.880.499      cache-misses                     #    2,973 % of all cache refs      (50,00%)
+   501.911.109.195      L1-dcache-loads                                                      (50,00%)
+    28.963.532.250      L1-dcache-load-misses            #    5,77% of all L1-dcache accesses  (50,00%)
+    28.997.236.540      l2_cache_accesses_from_dc_misses                                     (50,00%)
+       371.046.742      l2_cache_misses_from_dc_misses                                       (50,00%)
+ 1.011.884.845.462      cycles                                                               (50,00%)
+ 2.219.022.501.521      instructions                     #    2,19  insn per cycle           (50,00%)
+   443.660.662.832      branches                                                             (50,00%)
+       327.017.191      branch-misses                    #    0,07% of all branches          (50,00%)
+
+     226,840290237 seconds time elapsed
+
+     225,691891000 seconds user
+       1,143979000 seconds sys
+
+
+[Graph-List] Arquivo: email-EuAll.txt | start: 0 | BFS_runs: 128 
+[Graph-List] Tempo construção (ms): 8.71008
+[Graph-List] Tempo 128 BFS (ms): 89.5342
+
+ Performance counter stats for './graph_list_bench email-EuAll.txt 0 128':
+
+        40.292.145      cache-references                                                     (48,94%)
+        16.701.003      cache-misses                     #   41,450 % of all cache refs      (50,86%)
+       824.929.330      L1-dcache-loads                                                      (51,91%)
+        23.014.684      L1-dcache-load-misses            #    2,79% of all L1-dcache accesses  (51,90%)
+        22.399.788      l2_cache_accesses_from_dc_misses                                     (51,90%)
+        12.042.214      l2_cache_misses_from_dc_misses                                       (51,06%)
+       908.029.144      cycles                                                               (49,14%)
+     2.110.507.362      instructions                     #    2,32  insn per cycle           (48,09%)
+       397.397.098      branches                                                             (48,10%)
+         9.026.930      branch-misses                    #    2,27% of all branches          (48,10%)
+
+       0,209257524 seconds time elapsed
+
+       0,197363000 seconds user
+       0,012083000 seconds sys
+
+
+[Graph-List] Arquivo: email-EuAll.txt | start: 0 | BFS_runs: 256 
+[Graph-List] Tempo construção (ms): 8.72522
+[Graph-List] Tempo 256 BFS (ms): 178.471
+
+ Performance counter stats for './graph_list_bench email-EuAll.txt 0 256':
+
+        72.071.174      cache-references                                                     (48,17%)
+        30.959.716      cache-misses                     #   42,957 % of all cache refs      (49,52%)
+     1.088.344.827      L1-dcache-loads                                                      (50,88%)
+        43.322.411      L1-dcache-load-misses            #    3,98% of all L1-dcache accesses  (52,23%)
+        42.207.269      l2_cache_accesses_from_dc_misses                                     (52,56%)
+        24.449.988      l2_cache_misses_from_dc_misses                                       (51,83%)
+     1.292.808.314      cycles                                                               (50,48%)
+     2.632.826.546      instructions                     #    2,04  insn per cycle           (49,12%)
+       480.182.549      branches                                                             (47,77%)
+        17.229.760      branch-misses                    #    3,59% of all branches          (47,44%)
+
+       0,296554909 seconds time elapsed
+
+       0,288668000 seconds user
+       0,008018000 seconds sys
+
+
+[Graph-List] Arquivo: email-EuAll.txt | start: 512 | BFS_runs: 128 
+[Graph-List] Tempo construção (ms): 8.96345
+[Graph-List] Tempo 128 BFS (ms): 88.6558
+
+ Performance counter stats for './graph_list_bench email-EuAll.txt 512':
+
+        42.710.804      cache-references                                                     (49,50%)
+        16.866.781      cache-misses                     #   39,491 % of all cache refs      (50,72%)
+       830.955.556      L1-dcache-loads                                                      (50,74%)
+        22.766.919      L1-dcache-load-misses            #    2,74% of all L1-dcache accesses  (50,72%)
+        21.897.374      l2_cache_accesses_from_dc_misses                                     (50,73%)
+        11.551.566      l2_cache_misses_from_dc_misses                                       (50,50%)
+       920.126.683      cycles                                                               (49,28%)
+     2.112.242.897      instructions                     #    2,30  insn per cycle           (49,26%)
+       400.442.072      branches                                                             (49,28%)
+         9.417.089      branch-misses                    #    2,35% of all branches          (49,27%)
+
+       0,204263931 seconds time elapsed
+
+       0,196370000 seconds user
+       0,008015000 seconds sys
+
+
+[Graph-List] Arquivo: email-EuAll.txt | start: 1024 | BFS_runs: 128 
+[Graph-List] Tempo construção (ms): 8.64839
+[Graph-List] Tempo 128 BFS (ms): 91.405
+
+ Performance counter stats for './graph_list_bench email-EuAll.txt 1024':
+
+        41.556.321      cache-references                                                     (48,88%)
+        16.666.344      cache-misses                     #   40,105 % of all cache refs      (50,82%)
+       829.699.706      L1-dcache-loads                                                      (51,59%)
+        22.909.015      L1-dcache-load-misses            #    2,76% of all L1-dcache accesses  (51,59%)
+        21.595.785      l2_cache_accesses_from_dc_misses                                     (51,58%)
+        11.531.990      l2_cache_misses_from_dc_misses                                       (51,12%)
+       913.421.435      cycles                                                               (49,18%)
+     2.112.773.442      instructions                     #    2,31  insn per cycle           (48,41%)
+       401.395.179      branches                                                             (48,41%)
+         9.306.416      branch-misses                    #    2,32% of all branches          (48,42%)
+
+       0,207642044 seconds time elapsed
+
+       0,187707000 seconds user
+       0,019968000 seconds sys
+
+
+[Graph-Hash] Arquivo: email-EuAll.txt | start: 0 | BFS_runs: 128 
+[Graph-Hash] Tempo construção (ms): 19.05
+[Graph-Hash] Tempo 128 BFS (ms): 146.123
+
+ Performance counter stats for './graph_hash_bench email-EuAll.txt 0 128':
+
+        65.257.939      cache-references                                                     (49,58%)
+        22.738.592      cache-misses                     #   34,844 % of all cache refs      (49,58%)
+       970.094.868      L1-dcache-loads                                                      (49,57%)
+        33.651.677      L1-dcache-load-misses            #    3,47% of all L1-dcache accesses  (49,57%)
+        36.436.507      l2_cache_accesses_from_dc_misses                                     (49,96%)
+        22.917.663      l2_cache_misses_from_dc_misses                                       (50,42%)
+     1.239.873.707      cycles                                                               (50,42%)
+     2.239.447.592      instructions                     #    1,81  insn per cycle           (50,43%)
+       446.909.701      branches                                                             (50,43%)
+         9.700.147      branch-misses                    #    2,17% of all branches          (50,04%)
+
+       0,280128508 seconds time elapsed
+
+       0,260232000 seconds user
+       0,020017000 seconds sys
+
+
+[Graph-Hash] Arquivo: email-EuAll.txt | start: 0 | BFS_runs: 256 
+[Graph-Hash] Tempo construção (ms): 19.3128
+[Graph-Hash] Tempo 256 BFS (ms): 294.521
+
+ Performance counter stats for './graph_hash_bench email-EuAll.txt 0 256':
+
+       119.279.679      cache-references                                                     (48,57%)
+        48.556.490      cache-misses                     #   40,708 % of all cache refs      (48,56%)
+     1.288.240.866      L1-dcache-loads                                                      (48,70%)
+        65.615.451      L1-dcache-load-misses            #    5,09% of all L1-dcache accesses  (49,61%)
+        70.162.435      l2_cache_accesses_from_dc_misses                                     (50,53%)
+        43.650.299      l2_cache_misses_from_dc_misses                                       (51,43%)
+     1.873.302.414      cycles                                                               (51,44%)
+     2.903.213.164      instructions                     #    1,55  insn per cycle           (51,30%)
+       562.309.398      branches                                                             (50,39%)
+        17.619.281      branch-misses                    #    3,13% of all branches          (49,47%)
+
+       0,429929832 seconds time elapsed
+
+       0,405665000 seconds user
+       0,023862000 seconds sys
+
+
+[Graph-Hash] Arquivo: email-EuAll.txt | start: 0 | BFS_runs: 512 
+[Graph-Hash] Tempo construção (ms): 19.4622
+[Graph-Hash] Tempo 512 BFS (ms): 568.031
+
+ Performance counter stats for './graph_hash_bench email-EuAll.txt 0 512':
+
+       231.949.208      cache-references                                                     (48,76%)
+        97.274.598      cache-misses                     #   41,938 % of all cache refs      (49,24%)
+     1.964.529.253      L1-dcache-loads                                                      (49,90%)
+       126.153.654      L1-dcache-load-misses            #    6,42% of all L1-dcache accesses  (50,47%)
+       137.646.347      l2_cache_accesses_from_dc_misses                                     (51,05%)
+        84.168.783      l2_cache_misses_from_dc_misses                                       (51,24%)
+     3.180.298.524      cycles                                                               (50,76%)
+     4.114.456.548      instructions                     #    1,29  insn per cycle           (50,10%)
+       765.336.666      branches                                                             (49,53%)
+        34.805.224      branch-misses                    #    4,55% of all branches          (48,95%)
+
+       0,703817473 seconds time elapsed
+
+       0,687828000 seconds user
+       0,015996000 seconds sys
+
+
+[Graph-Hash] Arquivo: email-EuAll.txt | start: 0 | BFS_runs: 1024 
+[Graph-Hash] Tempo construção (ms): 19.4311
+[Graph-Hash] Tempo 1024 BFS (ms): 1145.22
+
+ Performance counter stats for './graph_hash_bench email-EuAll.txt 0 1024':
+
+       447.625.699      cache-references                                                     (49,90%)
+       190.144.325      cache-misses                     #   42,478 % of all cache refs      (49,90%)
+     3.358.577.089      L1-dcache-loads                                                      (49,90%)
+       245.596.381      L1-dcache-load-misses            #    7,31% of all L1-dcache accesses  (49,90%)
+       271.712.761      l2_cache_accesses_from_dc_misses                                     (49,97%)
+       170.784.755      l2_cache_misses_from_dc_misses                                       (50,10%)
+     5.825.579.878      cycles                                                               (50,10%)
+     6.384.524.686      instructions                     #    1,10  insn per cycle           (50,10%)
+     1.176.921.387      branches                                                             (50,10%)
+        66.900.331      branch-misses                    #    5,68% of all branches          (50,03%)
+
+       1,280211962 seconds time elapsed
+
+       1,260302000 seconds user
+       0,020004000 seconds sys
